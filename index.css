@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font: 15px times;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 3rem auto 3rem;
+    row-gap: 1em;
+}
+
+.header {
+    grid-column: 1 / -1;
+    background-color: purple;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.artwork {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1em;
+    margin-right: 1em;
+    align-items: center;
+    grid-row: 2 / 3;
+    background-color: yellow;
+}
+
+.footer {
+    grid-column: 1 / -1;
+    background-color: aqua;
+}
