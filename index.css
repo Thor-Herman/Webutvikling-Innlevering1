@@ -6,7 +6,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 4fr 4fr;
-    grid-template-rows: 3rem auto auto 3rem;
+    grid-template-rows: 3rem auto auto auto;
     row-gap: 1em;
 }
 
@@ -42,6 +42,13 @@ body {
 }
 
 .footer {
+    display: flex;
+    flex-direction: column;
     grid-column: 1 / -1;
+    grid-row: 4 / 5;
     background-color: aqua;
+}
+
+.info {
+    display: none;
 }
