@@ -27,7 +27,7 @@ const renderBackGround = () => {
     const width = canv.width();
     const height = canv.height();
     console.log(`width ${width} height ${height}`)
-    context.fillStyle = '#FFFFFF';
+    context.fillStyle = '#FF0000';
     console.log(dpr);
     context.fillRect(0, 0, width*dpr, height*dpr);
 }
@@ -45,7 +45,7 @@ const renderCanvas = () => {
     renderCircle();
 }
 
-$(".info-rev").click(() => $(".info").slideToggle("fast"));
+$(".info-rev").click(() => $(".info").slideToggle("slow"));
 
 renderCanvas();
 
