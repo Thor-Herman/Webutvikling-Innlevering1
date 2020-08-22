@@ -1,7 +1,7 @@
 const canvas = document.getElementById("canvas");
-const $canvas = $("canvas");
+const $canvas = $("#canvas");
 const context = canvas.getContext("2d");
-const dpr = window.devicePixelRatio;
+let dpr = window.devicePixelRatio;
 
 console.log("JAVASCRIPT");
 
@@ -15,18 +15,21 @@ const createGradient = () => {
 }
 
 const fixDpi = () => {
-    const height = +$canvas.css("height").slice(0, -2);
-    const width = +$canvas.css("width").slice(0, -2);
+    const canv = $("canvas");
+    dpr = window.devicePixelRatio;
+    const height = +canv.css("height").slice(0, -2);
+    const width = +canv.css("width").slice(0, -2);
     $canvas.attr("height", height*dpr).attr("width", width*dpr);
 }
 
-$(window).resize(() => fixDpi());
-
 const renderBackGround = () => {
-    const width = $canvas.width();
-    const height = $canvas.height();
+    const canv = $("canvas");
+    const width = canv.width();
+    const height = canv.height();
+    console.log(`width ${width} height ${height}`)
     context.fillStyle = '#FFFFFF';
-    context.fillRect(0, 0, width, height);
+    console.log(dpr);
+    context.fillRect(0, 0, width*dpr, height*dpr);
 }
 
 const renderCircle = () => {
@@ -42,7 +45,10 @@ const renderCanvas = () => {
     renderCircle();
 }
 
+$(".info-rev").click(() => $(".info").slideToggle("fast"));
+
 renderCanvas();
 
 $canvas.click(()=> $(console.log("I got clicked")));
 $canvas.mouseenter(()=>$(console.log("Mouse enter"))).mouseleave(()=>$(console.log("Mouse leave")));
+$(window).resize(()=>renderCanvas());
