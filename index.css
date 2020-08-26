@@ -81,6 +81,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content: center;
     grid-column: 1 / -1;
     grid-row: 6 / 7;
     background-color: var(--header-color);
@@ -98,12 +99,17 @@ body {
     grid-row: 5/6;
     grid-column: 1 / -1;
     display: none;
-    padding: 1em;
-    margin: 1em;
+}
+
+.info-grid {
+    border-radius: 0.5em;
+    margin: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
     background-color: var(--complementary-bg-color);
 }
 
-.info-rev {
+#info-button {
     border-radius: 2em;
     margin: auto;
     width: 12em;
@@ -112,14 +118,14 @@ body {
     background-color: #03DAC6;
 }
 
-.info-rev:hover {
+#info-button:hover {
     background-color: #13EAD6;
 }
 
 
 @media screen and (max-width: 700px) {
     .container {
-        grid-template-rows: 3rem auto auto auto auto;
+        grid-template-rows: 3rem repeat(6, auto);
     }
 
     #canvas-artwork {
@@ -135,7 +141,15 @@ body {
         grid-row: 4/5;
     }
 
-    .footer {
+    .docs {
         grid-row: 5/6;
+    }
+
+    .info {
+        grid-row: 6/7;
+    }
+
+    .footer {
+        grid-row: 7/8;
     }
 }

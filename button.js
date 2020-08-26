@@ -1,6 +1,6 @@
 $(document).ready(() => {
     let infoRevClicked = 0;
-    const infoRev = $(".info-rev");
+    const infoRev = $("#info-button");
     const $info = $(".info");
     infoRev.click(() => {
         infoRevClicked = (infoRevClicked + 1) % 2;
@@ -12,7 +12,7 @@ $(document).ready(() => {
         $info.css({
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
-            gridTemplateRows: "repeat(3, 10em)"
+            gridTemplateRows: "repeat(3, auto)"
         })
     }
 
