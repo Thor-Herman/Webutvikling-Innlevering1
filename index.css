@@ -5,18 +5,24 @@
     --header-color: rgb(50, 53, 55);
 }
 
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font: 15px times;
     background-color: var(--background-color);
     color: var(--text-color);
+    height: 100%;
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3rem auto auto auto auto auto;
+    grid-template-rows: 3rem repeat(5, auto);
     row-gap: 1em;
+    height: 100%;
 }
 
 .header {
@@ -106,8 +112,8 @@ body {
     background-color: #03DAC6;
 }
 
-.info-rev :hover {
-
+.info-rev:hover {
+    background-color: #13EAD6;
 }
 
 
