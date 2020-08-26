@@ -4,8 +4,6 @@ $(document).ready(() => {
     const context = canvas.getContext("2d");
     let dpr = window.devicePixelRatio;
 
-    console.log("JAVASCRIPT");
-
     const createGradient = () => {
         const gradient = context.createRadialGradient(75, 50, 5, 90, 60, 100);
         gradient.addColorStop(0, "black");
@@ -24,7 +22,7 @@ $(document).ready(() => {
     };
 
     const renderBackGround = () => {
-        const canv = $("canvas");
+        const canv = $("#canvas");
         const width = canv.width();
         const height = canv.height();
         console.log(`width ${width} height ${height}`);
