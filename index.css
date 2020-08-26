@@ -2,6 +2,7 @@
     --complementary-bg-color: rgb(32, 35, 36);
     --background-color: #181a1b;
     --text-color: #e8e6e3;
+    --header-color: rgb(50, 53, 55);
 }
 
 body {
@@ -20,10 +21,14 @@ body {
 
 .header {
     grid-column: 1 / -1;
-    background-color: rgb(50, 53, 55);
+    background-color: var(--header-color);
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.header h3 {
+    padding-left: 1.5em;
 }
 
 .artwork {
@@ -35,6 +40,8 @@ body {
     align-items: center;
     grid-row: 2 / 3;
     background-color: var(--complementary-bg-color);
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
 }
 
 .artwork canvas {
@@ -58,20 +65,26 @@ body {
     margin-left: 1em;
     margin-right: 1em;
     background-color: var(--complementary-bg-color);
+    border-radius: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     grid-column: 1 / -1;
     grid-row: 6 / 7;
-    background-color: var(--complementary-bg-color);
+    background-color: var(--header-color);
 }
+
 
 .docs {
     grid-row: 4/5;
     grid-column: 1 / -1;
     display: flex;
+    padding: 2em;
 }
 
 .info {
@@ -83,7 +96,7 @@ body {
 .info-rev {
     border-radius: 2em;
     margin: auto;
-    width: auto;
+    width: 12em;
     border-style: none;
     padding: 1em;
     background-color: #03DAC6;
@@ -92,6 +105,7 @@ body {
 .info-rev :hover {
 
 }
+
 
 @media screen and (max-width: 700px) {
     .container {

@@ -8,7 +8,9 @@
 </head>
 <body>
 <div class="container">
-  <header class="header">My Artsy Website</header>
+  <header class="header">
+    <h3>My Artsy Website</h3>
+  </header>
   <div class="artwork" id="canvas-artwork">
     <h3>My Canvas Artwork</h3>
     <canvas id="canvas" width="500px" height="300px"></canvas>
@@ -19,19 +21,22 @@
       <defs>
       </defs>
       <rect id="svg-background" width="500" height="300"/>
-      <ellipse cx="200" cy="70" rx="45" ry="30" />
-      <ellipse cx="300" cy="70" rx="45" ry="30" />
+      <ellipse cx="200" cy="70" rx="45" ry="30"/>
+      <ellipse cx="300" cy="70" rx="45" ry="30"/>
       <circle id="svg-left-eye" cx="200" cy="70" r="20" stroke="black" stroke-width="3" fill="white"/>
       <circle id="svg-right-eye" cx="300" cy="70" r="20" stroke="black" stroke-width="3" fill="white"/>
-      <rect id="svg-nose" width="10" height="50" x="250" y="100" />
+      <rect id="svg-nose" width="10" height="50" x="250" y="100"/>
     </svg>
   </div>
   <div class="about">
     <h3>About the artist</h3>
-    <p>Mr. Artist is a very recognized and admired man</p>
+    <p>Mr. Artist is a very recognized and admired man. He has dedicated the entirety of his existence to the sole
+      purpose of creating graphic content with HTML and SVG. His style is thoroughly influenced by his youth, which he
+      spent great amounts of time watching television. In his most recent collection, you can find his depictions of the
+      human existence. </p>
   </div>
   <div class="docs">
-    <button class="info-rev">Documentation</button>
+    <button class="info-rev">Show Documentation</button>
   </div>
   <div class="info">
     <h5>Grid and Flexbox</h5>
@@ -53,11 +58,12 @@
     </ul>
   </div>
   <div class="footer">
-    
+    <p>All rights reserved to Mr. Artist</p>
   </div>
 </div>
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript" src="svgCanvas.js"></script>
+
 <script id="__bs_script__">//<![CDATA[
 document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.12'><\/script>".replace("HOST", location.hostname));
 //]]></script>
