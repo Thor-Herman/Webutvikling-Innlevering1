@@ -11,7 +11,6 @@ $(document).ready(() => {
         infoRev.html("Hide Documentation");
         $info.css({
             display: "grid",
-            gridTemplateColumns: "1fr 1fr",
             gridTemplateRows: "repeat(3, auto)"
         })
     }
