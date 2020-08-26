@@ -7,11 +7,11 @@
 
 html {
     height: 100%;
+    font-family: "Maitree", Serif !important;
 }
 
 body {
     margin: 0;
-    font: 15px times;
     background-color: var(--background-color);
     color: var(--text-color);
     height: 100%;
@@ -31,6 +31,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    font-size: 150%;
 }
 
 .header h3 {
@@ -48,6 +49,7 @@ body {
     background-color: var(--complementary-bg-color);
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
+    font-size: 130%;
 }
 
 .artwork canvas {
@@ -79,6 +81,7 @@ body {
     border-radius: 0.5em;
     padding-left: 1em;
     padding-right: 1em;
+    font-size: 140%;
 }
 
 .footer {
@@ -112,6 +115,7 @@ body {
     padding-left: 1em;
     padding-right: 1em;
     background-color: var(--complementary-bg-color);
+    font-size: 130%;
 }
 
 #info-button {
@@ -121,6 +125,7 @@ body {
     border-style: none;
     padding: 1em;
     background-color: #03DAC6;
+    font-size: 130%;
 }
 
 #info-button:hover {
