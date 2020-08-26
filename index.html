@@ -9,23 +9,32 @@
 <body>
 <div class="container">
   <header class="header">
-    <h3>My Artsy Website</h3>
+    <h3>Artsweb</h3>
   </header>
   <div class="artwork" id="canvas-artwork">
-    <h3>My Canvas Artwork</h3>
+    <h3>The Human Mind on Canvas</h3>
     <canvas id="canvas" width="500px" height="300px"></canvas>
   </div>
   <div class="artwork" id="svg-artwork">
-    <h3>My SVG Artwork</h3>
+    <h3>The Human Mind on SVG</h3>
     <svg id="svg-artwork" viewbox="0 0 500 300">
-      <defs>
-      </defs>
       <rect id="svg-background" width="500" height="300"/>
       <ellipse cx="200" cy="70" rx="45" ry="30"/>
       <ellipse cx="300" cy="70" rx="45" ry="30"/>
-      <circle id="svg-left-eye" cx="200" cy="70" r="20" stroke="black" stroke-width="3" fill="white"/>
-      <circle id="svg-right-eye" cx="300" cy="70" r="20" stroke="black" stroke-width="3" fill="white"/>
+      <circle id="svg-left-eye" cx="190" cy="63" r="20" stroke="black" stroke-width="3" fill="white"/>
+      <circle id="svg-right-eye" cx="310" cy="73" r="20" stroke="black" stroke-width="3" fill="white"/>
       <rect id="svg-nose" width="10" height="50" x="250" y="100"/>
+      <path id="svg-nose-triangle" d="M 250 120 L 300 150 L  250 150"  />
+      <g id="svg-happy-face">
+        <path d="M160 170 c20 100, 180 100, 200 0" stroke="black" stroke-width="3" fill="white"/>
+        <path d="M160 170 L 360 170" stroke="black" stroke-width="3" fill="transparent"/>
+      </g>
+      <g id="svg-angry-face">
+        <path d="M160 240 c20 -100, 180 -100, 200 0" stroke="black" stroke-width="3" fill="white"/>
+        <path d="M160 240 L 360 240" stroke="black" stroke-width="3" fill="transparent"/>
+        <path d="M240 50 L 150 10" stroke="black" stroke-width="6" />
+        <path d="M260 50 L 350 10" stroke="black" stroke-width="6" />
+      </g>
     </svg>
   </div>
   <div class="about">
