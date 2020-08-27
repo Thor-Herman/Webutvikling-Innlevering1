@@ -1,9 +1,9 @@
 $(document).ready(() => {
-    let infoRevClicked = 0;
+    let infoRevClicked = false;
     const infoRev = $("#info-button");
     const $info = $(".info");
     infoRev.click(() => {
-        infoRevClicked = (infoRevClicked + 1) % 2;
+        infoRevClicked = !infoRevClicked
         infoRevClicked ? showDocs() : hideDocs();
     });
 

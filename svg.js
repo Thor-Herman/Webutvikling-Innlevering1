@@ -1,12 +1,12 @@
 
 
 $(document).ready(() => {
-    let toggled = 0;
+    let toggled = false;
     const $bckgrd = $("#svg-background");
     const $happyFace = $("#svg-happy-face")
     const $angryFace = $("#svg-angry-face");
     $("#svg-artwork").click( () => {
-        toggled = (toggled + 1) % 2
+        toggled = ! toggled;
         toggled ? angryFace() : happyFace();
         }
     );
