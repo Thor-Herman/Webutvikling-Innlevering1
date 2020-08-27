@@ -42,8 +42,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin: 1em 2em 1em 2em;
     align-items: center;
     grid-row: 2 / 3;
     background-color: var(--complementary-bg-color);
@@ -75,13 +74,21 @@ body {
 .about {
     grid-row: 3 / 4;
     grid-column: 1 / -1;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
     background-color: var(--complementary-bg-color);
     border-radius: 0.5em;
     padding-left: 1em;
     padding-right: 1em;
-    font-size: 140%;
+    font-size: 120%;
+}
+
+.about p {
+    margin-top: 0.5em;
+}
+
+.about h4 {
+    margin-bottom: 0.5em;
 }
 
 .footer {
@@ -107,6 +114,16 @@ body {
     grid-column: 1 / -1;
     grid-template-columns: 1fr 1fr;
     display: none;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.info a:visited {
+    color: deeppink;
+}
+
+.info a {
+    color: #13EAD6;
 }
 
 .info-grid {
@@ -115,7 +132,19 @@ body {
     padding-left: 1em;
     padding-right: 1em;
     background-color: var(--complementary-bg-color);
-    font-size: 130%;
+    font-size: 120%;
+}
+
+.info-grid h4 {
+    margin-bottom: 0;
+}
+
+.info-grid ul {
+    margin-top: 0.5em;
+}
+
+.info-grid p {
+    margin-top: 0.5em;
 }
 
 #info-button {
@@ -132,9 +161,30 @@ body {
     background-color: #13EAD6;
 }
 
+@media screen and (max-width: 1100px) {
+    .artwork {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+    .about {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+    .info {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+}
+
 @media screen and (max-width: 700px) {
     .container {
         grid-template-rows: 3rem repeat(6, auto);
+    }
+
+    .artwork {
+        margin-left: 1em;
+        margin-right: 1em;
     }
 
     #canvas-artwork {
@@ -148,6 +198,8 @@ body {
 
     .about {
         grid-row: 4/5;
+        margin-left: 1em;
+        margin-right: 1em;
     }
 
     .docs {
@@ -156,6 +208,8 @@ body {
 
     .info {
         grid-row: 6/7;
+        margin-left: 1em;
+        margin-right: 1em;
     }
 
     .footer {
