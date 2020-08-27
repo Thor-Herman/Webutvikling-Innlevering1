@@ -13,11 +13,11 @@
     <h3>Artsweb</h3>
   </header>
   <div class="artwork" id="canvas-artwork">
-    <h3>The Human Mind on Canvas</h3>
+    <h4>The Human Mind on Canvas</h4>
     <canvas id="canvas" width="500px" height="300px"></canvas>
   </div>
   <div class="artwork" id="svg-artwork">
-    <h3>The Human Mind on SVG</h3>
+    <h4>The Human Mind on SVG</h4>
     <svg id="svg-artwork" viewbox="0 0 500 300">
       <rect id="svg-background" width="500" height="300"/>
       <ellipse cx="200" cy="70" rx="45" ry="30"/>
@@ -39,8 +39,8 @@
     </svg>
   </div>
   <div class="about">
-    <h3>About the artist</h3>
-    <p>Mr. Artist is a very recognized and admired man. He has dedicated the entirety of his existence to the sole
+    <h4>About the artist</h4>
+    <p>Mr. Artist is a very recognized and admired man. He has dedicated most of his existence to the sole
       purpose of creating graphic content with HTML and SVG. His style is thoroughly influenced by his youth, which he
       spent great amounts of time surfing the net. When he was 5 years old, he discovered the joy of canvas and SVG,
       and has never let down his keyboard since. In his most recent collection, you can find his depictions of the
@@ -51,29 +51,72 @@
   </div>
   <div class="info">
     <div class="info-grid" id="flexbox-info">
-      <h5>Grid and Flexbox</h5>
-      <p>Bla bla bla</p>
+      <h4>Grid and Flexbox</h4>
+      <p>I have used CSS Grid to structure the overall layout of my website. This is because it is suitable for laying
+        out elements in two dimensions, compared to flexbox, which is intended for one. Thus, I have used flexbox
+        primarily within grid areas to structure the content inside these. It has been heavily used to center elements
+        in the middle of a grid area, as it is easy to achieve by using it. Additionally, I have used a subgrid to
+        structure the elements of the documentation. This is done separately from the overall grid in order to have 2
+        simpler grids instead of 1 complex.</p>
     </div>
     <div class="info-grid" id="canvas-svg-info">
-      <h5>Canvas and SVG</h5>
-      <p>Bla bla bla</p>
+      <h4>Canvas and SVG</h4>
+      <p>I used the canvas API for the artwork on the left, and SVG for the artwork on the right. The SVG is
+        defined directly in the HTML, whereas Canvas is done through methods using the API in Javascript. The canvas
+        itself is however defined in the HTML, but not its contents. Both of their
+        interactive
+        parts are in javascript using jQuery. However, the SVG has everything already defined in HTML, and only the
+        visibility is
+        toggled. The Canvas is entirely redrawn for each call, i.e. mouse enter and mouse leave. I have used equal
+        pixel widths and heights, which makes it
+        easier to replicate the artworks, as both have similar drawing methods (e.g. ellipse, bezier curve,
+        rectangle).</p>
     </div>
     <div class="info-grid" id="jquery-info">
-      <h5>jQuery</h5>
-      <p>Bla bla bla</p>
+      <h4>jQuery</h4>
+      <p>jQuery has been used to access the elements, enable interactivity on the artworks, and enable the
+        hiding/showing of
+        the documentation. I have used it to access the HTML element using its basic selector. Furthermore, I have used
+        methods like .click() and .mouseenter() to handle events on the artworks and on the button. To alter the
+        appearances of the svg
+        artwork and the documentation, I used the .css() method. This was also used to make the documentation appear, by
+        making its display go from none to grid. To alter the canvas, I used the canvas API and its corresponding
+        methods, which were called on jQuery events.</p>
+    </div>
+    <div class="info-grid" id="browser-info">
+      <h4>Cross-Browser Testing</h4>
+      <p>I have tested the functionality of the site in Firefox, Google Chrome, and Microsoft Edge. From my observations
+        it looks and functions equally in all three. I am unaware of any methods/elements used that are unsupported by
+        either of them.</p>
     </div>
     <div class="info-grid" id="sources">
-      <h5>Sources</h5>
+      <h4>Essential Sources</h4>
       <ul>
-        <li><a href="https://api.jquery.com">jQuery documentation</a></li>
-        <li><a href="https://www.w3schools.com/jquery/default.asp">W3Schools jQuery</a></li>
-        <li><a href="https://www.w3schools.com/graphics/default.asp">W3Schools Graphics</a></li>
-        <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background"></a>CSS-tricks for
-          flexbox and grid
+        <li><a href="https://api.jquery.com">jQuery documentation</a> - To reference methods for jQuery and find
+          methods I needed
         </li>
-        <li><a href="https://www.webfx.com/blog/web-design/google-font-api-guide/">Guide for google fonts</a></li>
-        <li><a href="http://jqfundamentals.com/">jQuery Fundamentals</a></li>
-        <li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
+        <li><a href="http://jqfundamentals.com/">jQuery Fundamentals</a> - To get an overview of jQuery and its
+          purpose
+        </li>
+        <li><a href="https://www.w3schools.com/jquery/default.asp">W3Schools jQuery</a> - Reference for jQuery
+          methods, and for more tutorials on how they should be used.
+        </li>
+        <li><a href="https://www.w3schools.com/graphics/default.asp">W3Schools Graphics</a> - To understand both
+          canvas and SVG. Reference used to understand their different methods.
+        </li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element">MDN SVG</a> - Also used as reference for
+          SVG methods
+        </li>
+        <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-tricks for
+          flexbox</a> - To understand the purpose of flexbox and its properties
+        </li>
+        <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS-tricks for
+          grid</a> - To understand the purpose of grid and its properties
+        </li>
+        <li><a href="https://www.webfx.com/blog/web-design/google-font-api-guide/">Guide for google fonts</a> - Used to
+          apply a custom font to the project
+        </li>
+        <li><a href="https://stackoverflow.com/">Stack Overflow</a> - General troubleshooting</li>
       </ul>
     </div>
   </div>
