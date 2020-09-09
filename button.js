@@ -3,7 +3,7 @@ $(document).ready(() => {
     const infoRev = $("#info-button");
     const $info = $(".info");
     infoRev.click(() => {
-        infoRevClicked = !infoRevClicked
+        infoRevClicked = !infoRevClicked;
         infoRevClicked ? showDocs() : hideDocs();
     });
 
@@ -12,11 +12,12 @@ $(document).ready(() => {
         $info.css({
             display: "grid",
             gridTemplateRows: "repeat(3, auto)"
-        })
-    }
+        });
+        $("#sources").css({gridColumn: "1 / -1;"})
+    };
 
     const hideDocs = () => {
-        infoRev.html("Show Documentation")
+        infoRev.html("Show Documentation");
         $info.css("display", "none");
-    }
+    };
 });

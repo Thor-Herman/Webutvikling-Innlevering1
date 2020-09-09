@@ -147,6 +147,11 @@ body {
     margin-top: 0.5em;
 }
 
+#sources {
+    grid-column: 1 / -1 !important;
+    grid-row: 3 / 4;
+}
+
 #info-button {
     border-radius: 2em;
     margin: auto;
@@ -166,10 +171,12 @@ body {
         margin-left: 0.5em;
         margin-right: 0.5em;
     }
+
     .about {
         margin-left: 0.5em;
         margin-right: 0.5em;
     }
+
     .info {
         margin-left: 0.5em;
         margin-right: 0.5em;
@@ -191,6 +198,7 @@ body {
         grid-row: 2/3;
         grid-column: 1 / -1;
     }
+
     #svg-artwork {
         grid-row: 3/4;
         grid-column: 1 / -1;
@@ -218,5 +226,10 @@ body {
 
     .info {
         grid-template-columns: 1fr;
+    }
+
+    #sources {
+        grid-column: 1 / -1 !important;
+        grid-row: 5 / 6;
     }
 }

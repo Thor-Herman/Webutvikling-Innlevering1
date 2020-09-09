@@ -16,8 +16,8 @@ $(document).ready(() => {
     };
     const renderEye = (x, y) => {
         context.moveTo(x, y);
-        context.ellipse(x, y, 45, 30, 0, 0, Math.PI*2);
-    }
+        context.ellipse(x, y, 45, 30, 0, 0, Math.PI * 2);
+    };
     const renderFace = () => {
         context.beginPath();
         context.fillStyle = "black";
@@ -30,31 +30,16 @@ $(document).ready(() => {
         context.fill();
         renderEyeball(190, 63);
         renderEyeball(310, 73);
-    }
-
-    const renderHappyFace = () => {
-        renderBackGround(false);
-        renderFace();
-        context.beginPath();
-        context.lineWidth = 3;
-        context.moveTo(160, 170);
-        context.lineTo(360, 170);
-        context.moveTo(160, 170);
-        context.bezierCurveTo(180, 270, 340, 270, 360, 170);
-        context.fillStyle = "white";
-        context.fill();
-        context.stroke();
-    }
-
-    const renderEyeBrows = () => {
+    };
+    const renderEyeBrows = (xOffset, yOffset) => {
         context.beginPath();
         context.lineWidth = 6;
-        context.moveTo(240, 50);
-        context.lineTo(150, 10);
-        context.moveTo(260, 50);
-        context.lineTo(350, 10);
+        context.moveTo(240 - xOffset, 50 - yOffset);
+        context.lineTo(150 - xOffset, 10 - yOffset);
+        context.moveTo(260 + xOffset, 50 - yOffset);
+        context.lineTo(350 + xOffset, 10 - yOffset);
         context.stroke();
-    }
+    };
 
     const renderAngryFace = () => {
         renderBackGround(true);
@@ -69,12 +54,65 @@ $(document).ready(() => {
         context.fill();
         context.stroke();
         renderEyeBrows();
-    }
+    };
 
-    renderAngryFace();
+    let intervalId = 0;
+    let lowerBrows = 0;
+    let raiseBrows = 0;
+    let timeOut = 0;
 
+    const oneIntervalAnimation = (xOffset, yOffset) => {
+        clearInterval(lowerBrows);
+        raiseBrows = setInterval(() => {
+                context.clearRect(0, 0, 500, 300);
+                xOffset++;
+                yOffset++;
+                renderAngryFace();
+                renderEyeBrows(xOffset, yOffset);
+            }, 50
+        );
+        timeOut = setTimeout(() => {
+            clearInterval(raiseBrows);
+            lowerBrows = setInterval(() => {
+                context.clearRect(0, 0, 500, 300);
+                xOffset--;
+                yOffset--;
+                renderAngryFace();
+                renderEyeBrows(xOffset, yOffset);
+            }, 50);
+        }, 500);
+    };
+
+    const renderAnimatedAngryFace = () => {
+        let xOffset = 0;
+        let yOffset = 0;
+        oneIntervalAnimation(xOffset, yOffset);
+        intervalId = setInterval(() => {
+            oneIntervalAnimation(xOffset, yOffset)
+        }, 1000);
+    };
+
+    const renderHappyFace = () => {
+        console.log("Happy");
+        clearInterval(intervalId);
+        clearInterval(lowerBrows);
+        clearInterval(raiseBrows);
+        clearTimeout(timeOut);
+        renderBackGround(false);
+        renderFace();
+        context.beginPath();
+        context.lineWidth = 3;
+        context.moveTo(160, 170);
+        context.lineTo(360, 170);
+        context.moveTo(160, 170);
+        context.bezierCurveTo(180, 270, 340, 270, 360, 170);
+        context.fillStyle = "white";
+        context.fill();
+        context.stroke();
+    };
+
+    renderHappyFace();
     $canvas.mouseenter(() =>
-        $(renderHappyFace())).mouseleave(() =>
-            renderAngryFace()
-    )
+        renderAnimatedAngryFace()).mouseleave(() =>
+        renderHappyFace())
 });

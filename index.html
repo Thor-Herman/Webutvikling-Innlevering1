@@ -33,8 +33,14 @@
       <g id="svg-angry-face">
         <path d="M160 240 c20 -100, 180 -100, 200 0" stroke="black" stroke-width="3" fill="white"/>
         <path d="M160 240 L 360 240" stroke="black" stroke-width="3" fill="transparent"/>
-        <path d="M240 50 L 150 10" stroke="black" stroke-width="6"/>
-        <path d="M260 50 L 350 10" stroke="black" stroke-width="6"/>
+        <path d="M240 50 L 150 10" stroke="black" stroke-width="6">
+          <animateMotion dur="1.2s" repeatCount="indefinite"
+                         path="M0 0 L -15 -15 z"/>
+        </path>
+        <path d="M260 50 L 350 10" stroke="black" stroke-width="6">
+          <animateMotion dur="1.2s" repeatCount="indefinite"
+                         path="M0 0 L 15 -15 z"/>
+        </path>
       </g>
     </svg>
   </div>
@@ -70,7 +76,8 @@
         toggled. The Canvas is entirely redrawn for each call, i.e. mouse enter and mouse leave. I have used equal
         pixel widths and heights, which makes it
         easier to replicate the artworks, as both have similar drawing methods (e.g. ellipse, bezier curve,
-        rectangle).</p>
+        rectangle). Animation of the SVG artwork is done using animateMotion as the elements only needed to move along a
+        path. Canvas is done using setTimeout and setInterval as those are familiar and simple methods</p>
     </div>
     <div class="info-grid" id="jquery-info">
       <h4>jQuery</h4>
@@ -115,6 +122,11 @@
         </li>
         <li><a href="https://www.webfx.com/blog/web-design/google-font-api-guide/">Guide for google fonts</a> - Used to
           apply a custom font to the project
+        </li>
+        <li><a href="https://www.w3schools.com/jsref/met_win_setinterval.asp">W3 setTimeout</a> - To animate HTML canvas
+        </li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animateMotion">MDN SVG Animation</a> - To
+          animate SVG
         </li>
         <li><a href="https://stackoverflow.com/">Stack Overflow</a> - General troubleshooting</li>
       </ul>
